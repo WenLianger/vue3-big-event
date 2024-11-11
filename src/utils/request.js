@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useUserStore } from '@/store'
+import { useUserStore } from '@/stores'
 import { ElMessage } from 'element-plus'
 import router from '@/router'
 const baseURL = 'http://big-event-vue-api-t.itheima.net'
@@ -37,3 +37,6 @@ instance.interceptors.response.use(
     return Promise.reject(err)
   },
 )
+
+export default instance
+export { baseURL }
